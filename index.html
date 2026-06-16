@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">  
+    
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <h1>Calculator</h1>
+
+        <!-- Input class -->
+         <div class="input-grp">
+        <input type="number" id="number1" placeholder="First">
+        <input type="number" id="number2" placeholder="Second">
+         </div>
+
+        <!-- Opwration -->
+        <div class="buttons">
+            <button onclick="calculate('add')">➕ Add</button> <!-- call the calculate function -->
+            <button onclick="calculate('subtract')">➖ Subtract</button>
+            <button onclick="calculate('multiply')">✖️ Multiply</button>
+            <button onclick="calculate('divide')">➗ Divide</button>
+        </div>
+
+        <!-- Result -->
+        <div class="result-box">
+            <p id="result">Result will appear here</p>
+        </div>
+
+        <!-- History Section(working on it) -->
+        <div class="history-box">
+            <h3>Calculation History</h3>
+            <ul id="history-list"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
