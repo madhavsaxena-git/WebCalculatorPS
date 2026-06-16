@@ -1,33 +1,36 @@
 let historyList = document.getElementById("history-list");
 
 
-
-function toggle(){
-    if (document.body.style.backgroundColor === "#f0f4f8") {
-        document.body.style.backgroundColor = "#black";
+function togglemode(){
+    if (document.body.style.backgroundColor === "") {
+        document.body.style.backgroundColor = "#1a202c";
     } else {
-        document.body.style.backgroundColor = "#f0f4f8";
+        document.body.style.backgroundColor = "";
     }
 }
 function calculate(operation) {
 
+  
     let num1 = document.getElementById("number1").value;
     let num2 = document.getElementById("number2").value;
 
+   
     if (num1 === "" || num2 === "") {
-        document.getElementById("result").innerText = "Enter Both No.";
+        document.getElementById("result").innerText = "Enter Both Nos.";
         return;
+     
     }
 
-
+  
     num1 = Number(num1);
     num2 = Number(num2);
 
-
+  
     let result;
-    let expression;/*working*/
+    let expression;
+   
 
-
+ 
     if (operation === "add") {
         result = num1 + num2;
         expression = num1 + " + " + num2 + " = " + result;
@@ -42,7 +45,7 @@ function calculate(operation) {
 
     } else if (operation === "divide") {
 
-        // division by zero check
+        // SPECIAL CASE: division by zero check
         if (num2 === 0) {
             document.getElementById("result").innerText = "Cannot divide by zero";
             return;
@@ -50,7 +53,7 @@ function calculate(operation) {
 
         result = num1 / num2;
         result = Math.round(result * 100) / 100;
-        // 2 decimal places
+        //rounds to 2 decimal places
 
         expression = num1 + " ÷ " + num2 + " = " + result;
     }
@@ -58,5 +61,13 @@ function calculate(operation) {
 
     document.getElementById("result").innerText = "Result: " + result;
 
-
+ 
     let listItem = document.createElement("li");
+    
+    
+    listItem.innerText = expression;
+  
+    
+    historyList.prepend(listItem);
+    
+}
