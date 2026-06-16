@@ -1,6 +1,14 @@
 let historyList = document.getElementById("history-list");
 
 
+
+function toggle(){
+    if (document.body.style.backgroundColor === "#f0f4f8") {
+        document.body.style.backgroundColor = "#black";
+    } else {
+        document.body.style.backgroundColor = "#f0f4f8";
+    }
+}
 function calculate(operation) {
 
     let num1 = document.getElementById("number1").value;
