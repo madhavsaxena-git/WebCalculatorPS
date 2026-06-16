@@ -1,4 +1,3 @@
-// ===== GRAB HISTORY LIST ELEMENT =====
 let historyList = document.getElementById("history-list");
 
 
@@ -8,7 +7,7 @@ function calculate(operation) {
     let num2 = document.getElementById("number2").value;
 
     if (num1 === "" || num2 === "") {
-        document.getElementById("result").innerText = "⚠️ Please enter both numbers!";
+        document.getElementById("result").innerText = "Enter Both No.";
         return;
     }
 
@@ -37,7 +36,7 @@ function calculate(operation) {
 
         // division by zero check
         if (num2 === 0) {
-            document.getElementById("result").innerText = "⚠️ Cannot divide by zero!";
+            document.getElementById("result").innerText = "Cannot divide by zero";
             return;
         }
 
@@ -53,11 +52,3 @@ function calculate(operation) {
 
 
     let listItem = document.createElement("li");
-
-    
-    listItem.innerText = expression;
-
-    
-    historyList.prepend(listItem);
-
-}
