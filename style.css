@@ -56,6 +56,20 @@ input:focus {
     border-color: #667eea;
 }
 
+#toggle {
+    padding: 14px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: Pink;
+    color: black;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+}
+
 /* buttons */
 .buttons {
     display: grid;
