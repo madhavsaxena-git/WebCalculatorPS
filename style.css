@@ -64,7 +64,7 @@ input:focus {
     margin-bottom: 20px;
 }
 
-button {
+.buttons button {
     padding: 14px;
     font-size: 15px;
     border: none;
